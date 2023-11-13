@@ -45,9 +45,7 @@ class _MainScreenState extends State<MainScreen> {
           BottomNavigationBarItem(
               icon: Icon(Icons.local_library), label: "Project"),
         ],
-        onTap: (newIndex) {
-          setState(() => _currentIndex = newIndex);
-        },
+        onTap: (newIndex) => setState(() => _currentIndex = newIndex),
       ),
     );
   }

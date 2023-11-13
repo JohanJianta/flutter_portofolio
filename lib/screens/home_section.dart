@@ -12,8 +12,14 @@ class HomeSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Selamat datang di Flutter Portofolio',
-              style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+              'Selamat datang di',
+              style: TextStyle(
+                  fontSize: 32, fontWeight: FontWeight.bold, letterSpacing: 5),
+            ),
+            Text(
+              'Flutter Portofolio',
+              style:
+                  TextStyle(fontSize: 32, color: Colors.blue, letterSpacing: 3),
             ),
           ],
         ),
