@@ -81,16 +81,19 @@ class AboutSection extends StatelessWidget {
               IconLabelButton(
                   label: email,
                   icon: Icons.email,
+                  // query untuk kirim email
                   query: 'mailto:$email?subject=$emailSubject&body=$emailBody'),
               const SizedBox(height: 16),
               IconLabelButton(
                   label: "+62 895-6304-86298",
                   icon: Icons.call,
+                  // query untuk bukan nomor telepon
                   query: 'tel:$phone'),
               const SizedBox(height: 16),
               IconLabelButton(
                   label: "facebook.com/johan.jianta",
                   icon: Icons.facebook,
+                  // query untuk buka website (pake https normal)
                   query: facebook),
               const SizedBox(height: 24),
               Center(
