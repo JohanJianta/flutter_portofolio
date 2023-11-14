@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       title: "Flutter Portofolio",
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        // set animasi transisi antar page
         pageTransitionsTheme: const PageTransitionsTheme(
           builders: <TargetPlatform, PageTransitionsBuilder>{
             TargetPlatform.android: ZoomPageTransitionsBuilder(),

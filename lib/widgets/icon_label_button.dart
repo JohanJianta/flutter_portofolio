@@ -17,9 +17,10 @@ class IconLabelButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       child: Row(children: [
+        // ClipOval untuk buat border lingkaran
         ClipOval(
           child: Material(
-            color: Colors.blue, // Button color
+            color: Colors.blue, // icon background color
             child: SizedBox(
                 width: 35,
                 height: 35,
@@ -35,6 +36,7 @@ class IconLabelButton extends StatelessWidget {
           style: const TextStyle(fontSize: 16.0),
         ),
       ]),
+      // jalankan link query apabila ditekan
       onTap: () => launchUrlString(query),
     );
   }

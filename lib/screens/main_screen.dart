@@ -12,10 +12,11 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  // list screen
   final _screens = [
     const HomeSection(),
     const AboutSection(),
-    const ProjectSection(),
+    const ProjectSection()
   ];
 
   int _currentIndex = 0;
@@ -28,6 +29,7 @@ class _MainScreenState extends State<MainScreen> {
         // set animasi untuk transisi antar-section
         transitionBuilder: (Widget child, Animation<double> primaryAnimation,
             Animation<double> secondaryAnimation) {
+          // transisi SharedAxis semacam Fade-in-out
           return SharedAxisTransition(
             transitionType: SharedAxisTransitionType.horizontal,
             animation: primaryAnimation,
@@ -35,9 +37,11 @@ class _MainScreenState extends State<MainScreen> {
             child: child,
           );
         },
+        // set tampilan body berdasarkan index
         child: _screens[_currentIndex],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        // index saat ini
         currentIndex: _currentIndex,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
@@ -45,6 +49,7 @@ class _MainScreenState extends State<MainScreen> {
           BottomNavigationBarItem(
               icon: Icon(Icons.local_library), label: "Project"),
         ],
+        // set index baru sesuai dengan navbar item yang ditekan
         onTap: (newIndex) => setState(() => _currentIndex = newIndex),
       ),
     );

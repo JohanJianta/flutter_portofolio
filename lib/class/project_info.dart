@@ -1,3 +1,4 @@
+// yah begitulah, gak ada yang perlu dijelaskan
 class ProjectInfo {
   final String title;
   final String subtitle;

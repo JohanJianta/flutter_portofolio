@@ -12,22 +12,28 @@ class ProjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // InkWell harus berada di dalam Material agar tidak error (ikuti saja best practice)
     return Material(
       child: InkWell(
+        // navigasi ke halaman Project sambil ngirim argument ProjectInfo
         onTap: () =>
             Navigator.of(context).pushNamed('/project', arguments: projectInfo),
         child: Card(
           margin: const EdgeInsets.all(16.0),
+          // clipBehavior agar image dan seluruh element child tetap berada di dalam Card
           clipBehavior: Clip.antiAlias,
+          // tambah ujung melengkung biar Card-nya nyaman diliat :D
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15.0),
           ),
           child: Column(
+            // entah apa saja gunanya, tapi ini buat image membesar sesuai lebar Card
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Image.asset(
                 projectInfo.imagePath,
                 height: 200.0,
+                // entah apa gunanya ini, tapi ikuti saja chatgpt
                 fit: BoxFit.cover,
               ),
               Padding(

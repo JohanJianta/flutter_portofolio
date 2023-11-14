@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_portofolio/class/project_info.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
+// ignore: must_be_immutable
 class ProjectScreen extends StatelessWidget {
   ProjectScreen({super.key});
 
+  // objek default apabila ProjectInfo null
   final ProjectInfo defaultProjectInfo = ProjectInfo(
     imagePath: 'assets/images/no-image-available.png',
     title: 'Judul Proyek',
@@ -21,8 +23,9 @@ class ProjectScreen extends StatelessWidget {
     try {
       projectInfo = ModalRoute.of(context)!.settings.arguments as ProjectInfo;
     } catch (e) {
-      // set projectInfo ke nilai default apabila error
+      // set projectInfo ke objek default apabila error
       projectInfo = defaultProjectInfo;
+      // tunggu builder selesai baru tampilkan snackbar
       WidgetsBinding.instance.addPostFrameCallback((_) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
             content: Text('Terjadi kesalahan ketika membuka halaman')));
@@ -35,6 +38,7 @@ class ProjectScreen extends StatelessWidget {
         child: Column(children: [
           Image(
             image: AssetImage(projectInfo.imagePath),
+            // set ukuran image mengikuti lebar layar (height akan menyesuaikan sendiri)
             width: double.infinity,
             fit: BoxFit.cover,
           ),
