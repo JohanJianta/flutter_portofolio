@@ -1,16 +1,11 @@
-# flutter_portofolio
+# Flutter Portofolio
 
-A new Flutter project.
+Untuk menjalankan aplikasi, terlebih dahulu jalankan perintah flutter pub get di terminal untuk mendapatkan dependencies yang dibutuhkan. Setelah itu, jalankan perintah flutter run di terminal. Maka aplikasi akan berjalan sesuai dengan device yang dipilih.
 
-## Getting Started
+## Fungsionalitas
 
-This project is a starting point for a Flutter application.
+Aplikasi ini berisikan portofolio tentang diri saya. Terdapat 4 halaman dalam aplikasi ini, yaitu Home (halaman selamat datang), About (halaman tentang diri saya), Project (halaman tentang proyek yang sudah saya pernah kerjakan), dan keterangan proyek.
 
-A few resources to get you started if this is your first Flutter project:
+Pengguna dapat melakukan navigasi ke tiap halaman melalui Bottom Navigation Bar. Namun, khusus halaman keterangan proyek hanya dapat diakses ketika pengguna menekan Card yang terdapat pada halaman Project. Keterangan yang ditampilkan sesuai dengan Card proyek yang dipilih.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+PPT/Canva bisa diakses [di sini](https://www.canva.com/design/DAF0GR_GCJs/qMyG-_FnQCyXellSaZ4USQ/view?utm_content=DAF0GR_GCJs&utm_campaign=designshare&utm_medium=link&utm_source=editor).
