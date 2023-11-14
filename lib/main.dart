@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portofolio/screens/project_screen.dart';
 import 'package:flutter_portofolio/screens/main_screen.dart';
 
 void main() {
@@ -15,8 +16,18 @@ class MyApp extends StatelessWidget {
       title: "Flutter Portofolio",
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        pageTransitionsTheme: const PageTransitionsTheme(
+          builders: <TargetPlatform, PageTransitionsBuilder>{
+            TargetPlatform.android: ZoomPageTransitionsBuilder(),
+            TargetPlatform.iOS: ZoomPageTransitionsBuilder(),
+          },
+        ),
       ),
-      home: const MainScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const MainScreen(),
+        '/project': (context) => ProjectScreen(),
+      },
     );
   }
 }
